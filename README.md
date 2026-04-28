@@ -4,7 +4,7 @@ Getting started making emails with Vite+Vituum.
 
 ```bash
 $ npm install
-$ npm run dev
+$ npm run dev # make some style and markup edits
 $ npm run build # will output an HTML file with inlined styles
 ```
 
