@@ -59,41 +59,33 @@ hr {
   }
 }
 
-
-div.offset,
-td.offset  {
-  padding: 0 0 0 48px;
-}
-
-td.content-wrapper {
+.header {
+  background: #fff;
+  border-top: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  padding: 0 48px 0 48px;
-  &.top {
-    padding: 48px 48px 0 48px;
-  }
-  &.bottom {
-    padding: 0 48px 52px 48px;
-  }
+  padding: 48px;
+  text-align: center;
 }
 
-td.hr {
-  line-height: 1px;
-  padding: 48px 0 48px 0;
+.logo-text {
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-div.copy,
-td.copy {
-  color: #252525;
-  font-size: 17px;
+.content-wrapper {
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  padding: 0 48px 52px;
 }
 
-td.white-bg {
-  background: #ffffff;
+td:has(> h1) {
+  padding-bottom: 16px;
 }
-
 td:has(> h2),
-h2 {
+h1 {
   font-size: 34px;
   font-weight: normal;
   letter-spacing: -0.34px;
@@ -101,9 +93,61 @@ h2 {
   text-rendering: optimizeLegibility;
   text-wrap: pretty;
 }
-td.content-wrapper:has(> h2) {
-  padding: 0 48px 17px 48px;
+p {
+  padding-bottom: 1em;
 }
-td.content-wrapper.top:has(> h2) {
-  padding: 48px 48px 17px 48px;
+
+td:has(> h2) {
+  padding-bottom: 8px;
+}
+td:has(> h2),
+h2 {
+  font-size: 26px;
+  font-weight: normal;
+  letter-spacing: -0.34px;
+  line-height: 38.25px;
+  text-rendering: optimizeLegibility;
+  text-wrap: pretty;
+}
+
+code {
+  background: #eee;
+  font-size: 15px;
+  padding: 0 4px;
+}
+
+td.hr {
+  line-height: 1px;
+  padding: 16px 0 28px 0;
+}
+
+td:has(> .button) {
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+  line-height: 15px;
+}
+td:has(> .button.small) {
+  font-size: 14px;
+  line-height: 14px;
+}
+.button {
+  background-color: #ffd82b;
+  border: 1px solid #E2B61E;
+
+  border-radius: 2px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.04),
+              0 5px 10px 0 rgba(0, 0, 0, 0.08);
+  color: #000;
+  cursor: pointer;
+  display: inline-block;
+  padding: 9px 24px 10px 24px;
+  text-align: center;
+  transition: background-color .2s ease;
+  vertical-align: middle;
+  will-change: background-color;
+  &:hover {
+    background-color: #FFD957 !important;
+  }
 }
